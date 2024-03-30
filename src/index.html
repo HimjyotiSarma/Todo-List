@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/todoist-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="imgContainer">
+        <h1>To Do List <span>Task Management Made Simple.</span></h1>
+      </div>
+    </header>
+    <!-- <div class="todoApp">
+      <div class="sideBar"></div>
+      <div class="main"></div>
+    </div> -->
+    <div class="todoApp">
+      <div class="sideBar">
+        <div class="default_sidebar">
+          <div data-default-list="today" class="side_menu">
+            <img src="./assets/images/icons8-today-96.png" />Today
+          </div>
+          <div data-default-list="seven_days" class="side_menu">
+            <img src="./assets/images/icons8-plus-1-week-96.png" /> Next 7 days
+          </div>
+          <div data-default-list="all_tasks" class="side_menu">
+            <img src="./assets/images/icons8-calendar-96.png" /> All my Tasks
+          </div>
+        </div>
+        <section class="project-section">
+          <h5>My Lists</h5>
+          <div class="all_Projects_List">
+            <div data-project-name="Work" class="side_menu">
+              <img src="./assets/images/project-list.png" alt="" />Work
+            </div>
+            <div data-project-name="Home" class="side_menu">
+              <img src="./assets/images/project-list.png" alt="" />Home
+            </div>
+            <div data-project-name="Books" class="side_menu">
+              <img src="./assets/images/project-list.png" alt="" />Books
+            </div>
+          </div>
+        </section>
+        <button class="add_Task_btn default_unstyle_btn" type="button">
+          <img src="./assets/images/add-tasks.png" alt="add tasks button" />Add
+          Task
+        </button>
+      </div>
+      <div class="main"></div>
+    </div>
+  </body>
+</html>
