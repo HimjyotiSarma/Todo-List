@@ -225,6 +225,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.5rem;
 }
 .left_project-area,
 .right_project_area {
@@ -275,6 +276,11 @@ body {
 .right_project_area * {
   margin-right: 10px;
 }
+.right_project_area {
+  display: grid;
+  max-width: 280px;
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+}
 .right_project_area .detail_btn {
   background-color: rgb(212, 155, 155);
   border: none;
@@ -319,4 +325,8 @@ body {
 .low {
   border: 1px solid rgb(196, 196, 196);
   border-left: 4px solid rgb(86, 205, 68);
+}
+.noPriority {
+  border: 1px solid rgb(196, 196, 196);
+  border-left: 4px solid rgb(179, 179, 179);
 }

@@ -1,3 +1,5 @@
+import { isToday } from "date-fns"
+
 class allProjects {
   // constructor(Projects) {
   //   // Get all the tasks from Local Storage and store it in this.Projects
@@ -66,6 +68,9 @@ class allProjects {
       MappedProjects.set(newTask.project, [newTask])
     }
     this.storeInLocal(MappedProjects)
+    // if (isToday(newTask.dueDate)) {
+    //   this.storeTodayList(newTask)
+    // }
   }
 
   deleteTask(id) {
@@ -142,6 +147,30 @@ class allProjects {
     this.storeInLocal(MappedTask)
     console.log(MappedTask)
   }
+  // storeTodayList(newTask) {
+  //   // let todatDate = new Date().getDate();
+
+  //   const MappedProjects = this.getAllTasks()
+  //   if (MappedProjects.has("today")) {
+  //     MappedProjects.get("today").push(newTask)
+  //   } else {
+  //     MappedProjects.set("today", [newTask])
+  //   }
+  //   this.storeInLocal(MappedProjects)
+  //   console.log("Stored in Today List")
+  // }
+  // storeWeekList(newTask) {
+  //   // let todayDate = new Date().getDate();
+
+  //   const MappedProjects = this.getAllTasks()
+  //   if (MappedProjects.has("inThisWeek")) {
+  //     MappedProjects.get("today").push(newTask)
+  //   } else {
+  //     MappedProjects.set("today", [newTask])
+  //   }
+  //   this.storeInLocal(MappedProjects)
+  //   console.log("Stored in Today List")
+  // }
 }
 
 export { allProjects }

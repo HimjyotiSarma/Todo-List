@@ -15,8 +15,15 @@ function SingleProjectCard({
   project,
   status,
 }) {
+  let PriorityClass
+  if (priority != "Not Defined") {
+    PriorityClass = priority.toLowerCase()
+  } else {
+    PriorityClass = "noPriority"
+  }
+  console.log(priority)
   const Parent = document.createElement("div")
-  Parent.classList.add("single_project", priority)
+  Parent.classList.add("single_project", PriorityClass)
   const leftSection = document.createElement("div")
   leftSection.classList.add("left_project-area")
   const rightSection = document.createElement("div")
@@ -28,10 +35,15 @@ function SingleProjectCard({
   ParentCheckBox.appendChild(label)
   const input = document.createElement("input")
   input.type = "checkbox"
+  if (status) {
+    input.checked = true
+  } else {
+    input.checked = false
+  }
   const span = document.createElement("span")
   span.className = "checkbox"
   input.addEventListener("click", () => {
-    Project.updateTask(id, { priority: !priority })
+    Project.updateTask(id, { status: !status })
   })
   ParentCheckBox.append(input, span)
 
@@ -73,6 +85,7 @@ function SingleProjectCard({
   deleteDiv.appendChild(deleteImg)
   deleteDiv.addEventListener("click", () => {
     Project.deleteTask(id)
+    console.log(id)
   })
 
   leftSection.append(ParentCheckBox, titleArea)
