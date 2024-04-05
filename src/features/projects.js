@@ -82,7 +82,13 @@ class allProjects {
     // })
     for (const [project, tasks] of MappedTasks) {
       let newTasks = tasks.filter((item) => item.id != id)
-      MappedTasks.set(project, newTasks)
+      console.log(newTasks)
+
+      if (!newTasks.length) {
+        MappedTasks.delete(project)
+      } else {
+        MappedTasks.set(project, newTasks)
+      }
     }
     // const deletedItemMap = new Map(ArrTasks)
     this.storeInLocal(MappedTasks)

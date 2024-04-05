@@ -53,9 +53,9 @@ function SingleProjectCard({
   titleArea.className = "title_area"
   const h5 = document.createElement("h5")
   h5.className = "title"
-  h5.innerHTML = limitWords(title, 10)
+  h5.innerHTML = limitWords(title, 6)
   const para = document.createElement("p")
-  para.innerHTML = limitWords(description, 15)
+  para.innerHTML = limitWords(description, 10)
   titleArea.append(h5, para)
 
   // Right Section Items
@@ -85,6 +85,7 @@ function SingleProjectCard({
   deleteDiv.appendChild(deleteImg)
   deleteDiv.addEventListener("click", () => {
     Project.deleteTask(id)
+    window.location.reload()
     console.log(id)
   })
 

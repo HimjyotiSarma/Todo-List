@@ -23,17 +23,7 @@
     </div> -->
     <div class="todoApp">
       <div class="sideBar">
-        <div class="default_sidebar">
-          <div data-project-name="today" class="side_menu">
-            <img src="./assets/images/icons8-today-96.png" />Today
-          </div>
-          <div data-project-name="seven_days" class="side_menu">
-            <img src="./assets/images/icons8-plus-1-week-96.png" /> Next 7 days
-          </div>
-          <div data-project-name="all_tasks" class="side_menu">
-            <img src="./assets/images/icons8-calendar-96.png" /> All my Tasks
-          </div>
-        </div>
+        <div class="default_sidebar"></div>
         <section class="project-section"></section>
         <button class="add_Task_btn default_unstyle_btn" type="button">
           <img src="./assets/images/add-tasks.png" alt="add tasks button" />Add
@@ -41,6 +31,115 @@
         </button>
       </div>
       <div class="main"></div>
+
+      <!-- Dialog -->
     </div>
+
+    <footer>
+      <aside id="createModal" class="modalArea closeItem">
+        <div class="modal_Content">
+          <div class="modal_head">
+            <h5>Create Tasks</h5>
+            <span class="close">&times;</span>
+          </div>
+          <div class="createTask_Modal_Area">
+            <form id="Create_form">
+              <div class="form_Area">
+                <label for="title"> Task Title </label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="What I Will Do?"
+                  required
+                />
+              </div>
+              <div class="form_Area">
+                <label for="description">Task Details</label>
+                <textarea
+                  name="description"
+                  id="description"
+                  cols="80"
+                  rows="5"
+                  placeholder="Write your task details here..."
+                ></textarea>
+              </div>
+              <div class="form_Area">
+                <label for="dueDate">Date</label>
+                <input type="date" name="dueDate" id="dueDate" required />
+              </div>
+              <div class="form_Area">
+                <label for="priority">Task Priority (Optional)</label>
+                <select name="priority" id="priority">
+                  <option selected="true" value="Not Defined" disabled>
+                    Not Specified
+                  </option>
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+              <div class="form_Area Select_Project">
+                <label for="project">Project (Optional)</label>
+                <select name="project" id="project"></select>
+              </div>
+              <button id="createTaskFormSubmit" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </aside>
+      <aside id="updateModal" class="modalArea closeItem">
+        <div class="modal_Content">
+          <div class="modal_head">
+            <h5>Create Tasks</h5>
+            <span class="close">&times;</span>
+          </div>
+          <div class="createTask_Modal_Area">
+            <form id="Create_form">
+              <div class="form_Area">
+                <label for="title"> Task Title </label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="What I Will Do?"
+                  required
+                />
+              </div>
+              <div class="form_Area">
+                <label for="description">Task Details</label>
+                <textarea
+                  name="description"
+                  id="description"
+                  cols="80"
+                  rows="5"
+                  placeholder="Write your task details here..."
+                ></textarea>
+              </div>
+              <div class="form_Area">
+                <label for="dueDate">Date</label>
+                <input type="date" name="dueDate" id="dueDate" required />
+              </div>
+              <div class="form_Area">
+                <label for="priority">Task Priority (Optional)</label>
+                <select name="priority" id="priority">
+                  <option selected="true" value="Not Defined" disabled>
+                    Not Specified
+                  </option>
+                  <option value="High">High</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+              <div class="form_Area Select_Project">
+                <label for="project">Project (Optional)</label>
+                <select name="project" id="project"></select>
+              </div>
+              <button id="createTaskFormSubmit" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </aside>
+    </footer>
   </body>
 </html>

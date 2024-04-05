@@ -10,7 +10,7 @@ function weekProjectList() {
   Parent.className = "list_all_projects"
   const h3 = document.createElement("h3")
   h3.className = "Project_Title"
-  h3.innerHTML = "Week's Task(s) List"
+  h3.innerHTML = "Week's Task(s)"
   const ProjectListDiv = document.createElement("div")
   ProjectListDiv.className = "project_list_section"
 
