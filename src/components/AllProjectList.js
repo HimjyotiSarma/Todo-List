@@ -1,4 +1,5 @@
 import { allProjects } from "../features/projects"
+import EmptyTask from "./EmptyTask"
 import SingleProjectCard from "./SingleProjectCard"
 // Change the active Project to Today Later;
 const Project = new allProjects()
@@ -13,6 +14,10 @@ function AllProjectList(activeProject = "Grocery") {
   h3.innerHTML = activeProject
   const ProjectListDiv = document.createElement("div")
   ProjectListDiv.className = "project_list_section"
+  if (!allTasksInProject) {
+    let emptyElement = EmptyTask()
+    return Parent.appendChild(emptyElement)
+  }
   for (let task of allTasksInProject) {
     const { id, title, description, dueDate, priority, project, status } = task
     ProjectListDiv.appendChild(

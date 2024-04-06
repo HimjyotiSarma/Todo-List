@@ -70,6 +70,9 @@ const Projects = new allProjects()
 // console.log(Projects.getAllTasks())
 // console.log(Projects.getAllTasksinProject("Work"))
 
+const getCertainData = Projects.getTask("uv1XPT3l9f5dZTtws0mLt")
+console.log(getCertainData)
+
 // Append the AllProjects Here:
 const main = document.getElementsByClassName("main")[0]
 console.log(main)

@@ -86,6 +86,7 @@ class allProjects {
 
       if (!newTasks.length) {
         MappedTasks.delete(project)
+        localStorage.setItem("currentMenu", "all_tasks")
       } else {
         MappedTasks.set(project, newTasks)
       }
@@ -107,6 +108,19 @@ class allProjects {
         return project
       }
     }
+  }
+  getTask(id) {
+    const MappedTasks = this.getAllTasks()
+    let taskData = []
+    for (const [project, tasks] of MappedTasks) {
+      tasks.forEach((task) => {
+        if (task.id == id) {
+          taskData = task
+        }
+      })
+    }
+    console.log("No Such Task Found")
+    return taskData
   }
   updateTask(id, newUpdatedTask) {
     // Write a Proper Edit Later

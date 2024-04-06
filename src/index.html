@@ -17,10 +17,6 @@
         <h1>To Do List <span>Task Management Made Simple.</span></h1>
       </div>
     </header>
-    <!-- <div class="todoApp">
-      <div class="sideBar"></div>
-      <div class="main"></div>
-    </div> -->
     <div class="todoApp">
       <div class="sideBar">
         <div class="default_sidebar"></div>
@@ -91,17 +87,17 @@
       <aside id="updateModal" class="modalArea closeItem">
         <div class="modal_Content">
           <div class="modal_head">
-            <h5>Create Tasks</h5>
+            <h5>Update Tasks</h5>
             <span class="close">&times;</span>
           </div>
-          <div class="createTask_Modal_Area">
-            <form id="Create_form">
+          <div class="updateTask_Modal_Area">
+            <form id="update_form">
               <div class="form_Area">
                 <label for="title"> Task Title </label>
                 <input
                   type="text"
                   name="title"
-                  id="title"
+                  id="Updatetitle"
                   placeholder="What I Will Do?"
                   required
                 />
@@ -110,7 +106,7 @@
                 <label for="description">Task Details</label>
                 <textarea
                   name="description"
-                  id="description"
+                  id="Updatedescription"
                   cols="80"
                   rows="5"
                   placeholder="Write your task details here..."
@@ -118,11 +114,11 @@
               </div>
               <div class="form_Area">
                 <label for="dueDate">Date</label>
-                <input type="date" name="dueDate" id="dueDate" required />
+                <input type="date" name="dueDate" id="UpdatedueDate" required />
               </div>
               <div class="form_Area">
                 <label for="priority">Task Priority (Optional)</label>
-                <select name="priority" id="priority">
+                <select name="priority" id="Updatepriority" value="High">
                   <option selected="true" value="Not Defined" disabled>
                     Not Specified
                   </option>
@@ -131,11 +127,11 @@
                   <option value="Low">Low</option>
                 </select>
               </div>
-              <div class="form_Area Select_Project">
+              <div class="form_Area Update_Project">
                 <label for="project">Project (Optional)</label>
-                <select name="project" id="project"></select>
+                <select name="project" id="Updateproject"></select>
               </div>
-              <button id="createTaskFormSubmit" type="submit">Submit</button>
+              <button id="updateTaskFormSubmit" type="submit">Update</button>
             </form>
           </div>
         </div>

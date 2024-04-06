@@ -86,7 +86,7 @@ ProjectSelect.append(createNewProject)
 ProjectSelect.addEventListener("change", function () {
   if (this.value == "Create New") {
     Select_Project_Div.remove()
-    let CreateNewProject = createProjectForm()
+    let CreateNewProject = createProjectForm("project")
     ModalContent.insertBefore(CreateNewProject, createTaskFormSubmit)
   }
 })

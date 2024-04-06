@@ -1,4 +1,4 @@
-function createProjectForm() {
+function createProjectForm(projectIdName) {
   // Create the div element
   let formArea = document.createElement("div")
   formArea.className = "form_Area"
@@ -13,7 +13,7 @@ function createProjectForm() {
   let input = document.createElement("input")
   input.type = "text"
   input.name = "project"
-  input.id = "project"
+  input.id = projectIdName
   input.placeholder = "Enter New Project..."
   // input.required = true
 

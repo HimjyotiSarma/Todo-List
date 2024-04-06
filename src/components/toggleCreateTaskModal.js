@@ -1,7 +1,7 @@
 const toggleCreateTaskModal = () => {
   let CreateTaskModal = document.getElementById("createModal")
-  let ModalContent = document.getElementsByClassName("modal_Content")[0]
-  let ModalClose = document.getElementsByClassName("close")[0]
+  let ModalContent = CreateTaskModal.querySelector(".modal_Content")
+  let ModalClose = document.querySelector("#createModal .close")
   console.log(ModalClose)
   ModalClose.addEventListener("click", () => {
     CreateTaskModal.className = "modalArea closeItem"

@@ -3,6 +3,8 @@ import { format } from "date-fns"
 import EditImg from "../assets/images/edit-svgrepo-com.svg"
 import DeleteImg from "../assets/images/trash.svg"
 import { allProjects } from "../features/projects"
+import UpdateTaskDetailsOpen from "../features/OpenUpdateTaskFunctionality"
+import createDetailModal from "./DetailComponent"
 
 const Project = new allProjects()
 
@@ -64,6 +66,11 @@ function SingleProjectCard({
   detailBtn.type = "button"
   detailBtn.className = "detail_btn"
   detailBtn.textContent = "DETAILS"
+  detailBtn.addEventListener("click", () => {
+    let detailModal = createDetailModal(id)
+    let footer = document.getElementsByTagName("footer")[0]
+    footer.appendChild(detailModal)
+  })
 
   // Task Due Date
   const DueDate = document.createElement("div")
@@ -76,6 +83,9 @@ function SingleProjectCard({
   const editImg = document.createElement("img")
   editImg.src = EditImg
   editDiv.appendChild(editImg)
+  editDiv.addEventListener("click", () => {
+    UpdateTaskDetailsOpen(id)
+  })
 
   // Delete Section
   const deleteDiv = document.createElement("div")

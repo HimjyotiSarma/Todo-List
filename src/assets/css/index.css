@@ -401,7 +401,19 @@ dialog::backdrop {
 .animateClose {
   animation: scaleBtn 0.5s ease-in-out infinite;
 }
-
+#detailModal {
+  width: 100%;
+}
+#detailModal .detail_area {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(200px, 4fr);
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#detailModal .detail_area h2 {
+  text-transform: capitalize;
+}
 @keyframes scaleBtn {
   0% {
     transform: scale(1);
